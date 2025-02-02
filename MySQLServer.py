@@ -1,5 +1,5 @@
-import mysql.connector # type: ignore
-from mysql.connector import Error # type: ignore
+import mysql.connector 
+from mysql.connector import Error
 
 def create_database():
     """Create alx_book_store database if it does not exist"""
@@ -16,7 +16,7 @@ def create_database():
             cursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
             print("Database 'alx_book_store' created successfully!")
             
-    except Error as e:
+    except mysql.connector.Error as e:
         print(f"Error: {e}")
     
     finally:
